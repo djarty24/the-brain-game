@@ -74,10 +74,10 @@ public class Level extends Screen implements Scrollable {
 
 	public void spawnNewCharacter() {
 		ArrayList<PImage> imgs = new ArrayList<PImage>();
-		imgs.add(surface.loadImage("img/rabbit-right.png"));
-		imgs.add(surface.loadImage("img/rabbit-left.png"));
-		imgs.add(surface.loadImage("img/rabbit-right-jump.png"));
-		imgs.add(surface.loadImage("img/rabbit-left-jump.png"));
+		imgs.add(surface.loadImage("img/ghost-right.png"));
+		imgs.add(surface.loadImage("img/ghost-left.png"));
+		imgs.add(surface.loadImage("img/ghost-right-jump.png"));
+		imgs.add(surface.loadImage("img/ghost-left-jump.png"));
 		r = new Rabbit(imgs, 0, 0);
 		if(invincible!=-1) {
 			r.glow(Rabbit.INVINCIBILITY);
@@ -103,7 +103,7 @@ public class Level extends Screen implements Scrollable {
 		imgs.add(surface.loadImage("img/cardFox-right.png"));
 		imgs.add(surface.loadImage("img/cardFox-left.png"));
 
-		PImage projectile = surface.loadImage("img/icecream-right.png");
+		PImage projectile = surface.loadImage("img/torch-right.png");
 		for(int i = 0; i < locs.size(); i++)
 		{
 			enemies.add(new Enemy(imgs, (int)locs.get(i).getX(), (int)locs.get(i).getY(), projectile));
@@ -112,7 +112,7 @@ public class Level extends Screen implements Scrollable {
 	
 	public void spawnEnemies(ArrayList<Point> locs, String type) {
 		if(locs==null) return;
-		PImage projectile = surface.loadImage("img/icecream-right.png");
+		PImage projectile = surface.loadImage("img/torch-right.png");
 
 		ArrayList<PImage> imgs = new ArrayList<PImage>();
 		if(type.equals(Enemy.FORWARD))
