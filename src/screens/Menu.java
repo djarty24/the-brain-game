@@ -32,7 +32,7 @@ public class Menu extends Screen {
 		surface.stroke(255, 102, 196);
 		surface.rect((float) start.x, (float) start.y, (float) start.width, (float) start.height, 20);
 		surface.rect((float) instructions.x, (float) instructions.y, (float) instructions.width, (float) instructions.height, 20);
-		surface.fill(255, 102, 196);
+		surface.fill(47, 38, 44);
 		surface.textSize(40);
 		String str = "Start";
 		String str2 = "Instructions";
